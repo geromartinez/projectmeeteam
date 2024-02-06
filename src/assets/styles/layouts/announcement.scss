@@ -1,0 +1,117 @@
+.announcement {
+  padding: 112px 0 80px;
+  background: $white;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 115px;
+  }
+  &__group {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    p {
+      max-width: 754px;
+      margin: 0 auto 16px;
+    }
+    &-box {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      .button {
+        padding: 0.94em 1.6em;
+        &--primary {
+          color: $white;
+          background: $black;
+          border-color: $black;
+          &:hover {
+            color: $black;
+            background: rgba($black, 0.15);
+          }
+        }
+        &--border {
+          border-color: $black;
+          color: $black;
+          &:hover {
+            color: $black;
+            background: rgba($black, 0.15);
+          }
+        }
+      }
+    }
+  }
+  &--sm {
+    padding: 112px 0;
+    .announcement {
+      &__group {
+        &-box {
+          .button {
+            padding: 0.94em 1.6em;
+            &--primary {
+              color: $white;
+              background: $primary;
+              border-color: $primary;
+              &:hover {
+                color: $primary;
+                background: rgba($primary, 0.15);
+              }
+            }
+            &--border {
+              border-color: $primary;
+              color: $primary;
+              &:hover {
+                color: $primary;
+                background: rgba($primary, 0.15);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin announcement-1160 {
+  .announcement {
+    padding: 100px 0 80px;
+    &__inner {
+      gap: 100px;
+    }
+  }
+}
+@mixin announcement-1025 {
+  .announcement {
+    padding: 80px 0;
+    &__inner {
+      gap: 80px;
+    }
+  }
+}
+@mixin announcement-940 {
+  .announcement {
+    padding: 70px 0;
+    &__inner {
+      gap: 60px;
+    }
+  }
+}
+@mixin announcement-460 {
+  .announcement {
+    padding: 64px 0;
+    &__inner {
+      gap: 32px;
+    }
+    &__group {
+      gap: 20px;
+      &-box {
+        flex-wrap: wrap;
+      }
+    }
+    p {
+      margin-bottom: 4px;
+    }
+  }
+}

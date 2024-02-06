@@ -1,0 +1,961 @@
+.talant {
+  padding: 80px 0 100px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__title {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    color: $black-4;
+    font-family: $font-title;
+    font-size: 24px;
+    justify-content: center;
+    text-align: center;
+    &-ico {
+      font-size: 25px;
+      width: 2em;
+      height: 2em;
+      min-width: 2em;
+      min-height: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    min-width: 1060px;
+    &-row {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      &._lg {
+        gap: 25px;
+      }
+      &._sm {
+        gap: 18px;
+      }
+    }
+    &-wrapper {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__item {
+    padding: 8px 20px;
+    border-radius: 10px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    &-ico {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      width: 2em;
+      height: 2em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.services {
+  padding: 64px 0 100px;
+  background: $primary-4;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $white;
+    text-align: center;
+    max-width: 1015px;
+    margin: 0 auto;
+    h2 {
+      margin-bottom: 8px;
+    }
+    strong {
+      font-weight: 600;
+    }
+    p {
+      span {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+    }
+  }
+  &__row {
+    display: none;
+    gap: 32px;
+    &.active {
+      display: flex;
+    }
+  }
+  &__item {
+    width: 304px;
+    &._lg {
+      width: calc(50% - 16px);
+      flex: 1;
+      padding: 48px;
+      gap: 24px;
+      .services {
+        &__item {
+          &-group {
+            margin-bottom: 8px;
+            gap: 24px;
+          }
+        }
+      }
+    }
+    background: $white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      width: 2em;
+      height: 2em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-box {
+      display: flex;
+      gap: 24px;
+    }
+    .button {
+      &--primary {
+        padding: 0.94em 1.5em;
+      }
+      &--text {
+        margin-right: auto;
+      }
+      &._orange {
+        color: $orange;
+      }
+      &._hideDesktop {
+        color: $orange;
+        display: none;
+      }
+    }
+    h3,
+    h4 {
+      color: $primary;
+    }
+  }
+  .video {
+    max-width: 1172px;
+    margin: 0 auto;
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+}
+.price {
+  padding: 112px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__container {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    padding: 50px 20px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+  }
+  &__header {
+    max-width: 1085px;
+    width: 90%;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  &__row {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-right: -20px;
+    &::after {
+      content: "";
+      width: calc(100% + 40px);
+      height: 1px;
+      background: $white-2;
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+    }
+  }
+  &__card {
+    padding: 32px 24px;
+    border-radius: 20px;
+    border: 4px solid currentColor;
+    color: $orange;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+    max-width: 446px;
+    &-box {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      justify-content: space-between;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      strong {
+        font-size: 48px;
+        font-family: $font-title;
+        line-height: 1.2;
+        small {
+          display: none;
+        }
+        &._sm {
+          font-size: 40px;
+          margin-bottom: 16px;
+        }
+        &._extraSm {
+          font-size: 32px;
+        }
+      }
+      span {
+        font-weight: 700;
+        line-height: 1.2;
+      }
+    }
+    p {
+      margin-bottom: 16px;
+      ._hide {
+        &Desktop {
+          display: none;
+        }
+      }
+    }
+    &._blue {
+      color: $primary-2;
+      border: transparent;
+      padding-top: 40px;
+      .button {
+        &--primary {
+          background: $primary-2;
+          border-color: $primary-2;
+          &:hover {
+            background: rgba($primary-2, 0.15);
+            color: $primary-2;
+          }
+        }
+      }
+    }
+    &._info {
+      background: $primary-3;
+      color: $white;
+      border: unset;
+      width: 100%;
+      padding: 64px 42px 72px;
+      max-width: unset;
+      .button {
+        width: 402px;
+        color: $black;
+        background: $white-2;
+        border-color: $white-2;
+        &:hover {
+          background: rgba($white-2, 0.15);
+          color: $white-2;
+        }
+      }
+      p {
+        margin-bottom: unset;
+      }
+      .price {
+        &__card {
+          &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+          }
+          &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+            max-width: 600px;
+          }
+        }
+      }
+    }
+    &-container {
+      display: none;
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 32px;
+      border-top: 1px solid currentColor;
+      width: 100%;
+      h6 {
+        font-weight: 400;
+        font-family: $font-secondary;
+      }
+      &._secondary {
+        color: $primary-3;
+      }
+    }
+    &-group {
+      display: none;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        display: flex;
+        gap: 16px;
+        font-family: $font-secondary;
+      }
+      .ico {
+        &--check {
+          color: $green;
+          &._white {
+            color: $white;
+          }
+        }
+        &--close {
+          color: $red;
+        }
+      }
+    }
+  }
+  &__button {
+    font-size: 16px;
+    font-family: $font-secondary;
+    background: $green;
+    color: $white;
+    border-radius: 10px;
+    padding: 0.65em 0.45em;
+    font-weight: 400;
+    @include transition;
+    &:hover {
+      opacity: 0.7;
+    }
+    &._sm {
+      padding: 0.4em 0.95em;
+    }
+  }
+  &__planes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+    &-row {
+      display: flex;
+      &._space {
+        margin-bottom: 8px;
+      }
+      &:last-child {
+        .price {
+          &__planes {
+            &-item {
+              &:after {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $primary-3;
+      padding: 16px 24px;
+      position: relative;
+      border-right: 4px solid $primary-3;
+      width: 33.3%;
+      gap: 20px;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $white-2;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $white-2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+      }
+
+      &:first-child {
+        padding-left: unset;
+      }
+      &:last-child {
+        border: unset;
+      }
+    }
+    h5 {
+      color: $primary-3;
+      margin-bottom: 20px;
+    }
+    .ico {
+      &._check {
+        margin: 0 auto;
+        color: $green;
+      }
+      &._uncheck {
+        margin: 0 auto;
+        color: $red;
+      }
+    }
+  }
+}
+
+@mixin clients-1280 {
+  .services {
+    &__row {
+      gap: 20px;
+    }
+    &__item {
+      padding: 20px;
+      &._lg {
+        padding: 30px;
+        .services__item {
+          &-group {
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin clients-1160 {
+  .talant {
+    &__title {
+      font-size: 22px;
+      &-ico {
+        font-size: 23px;
+      }
+    }
+    &__container-wrapper {
+      margin-left: -40px;
+      width: calc(100% + 80px);
+    }
+  }
+  .services {
+    padding: 64px 0 90px;
+    &__inner {
+      gap: 70px;
+    }
+    &__row {
+      gap: 16px;
+    }
+    &__item {
+      width: 290px;
+      &._lg {
+        padding: 20px;
+        .services__item {
+          &-group {
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+  .price {
+    padding: 100px 0;
+    &__card {
+      &._info {
+        .button {
+          width: 370px;
+        }
+      }
+    }
+  }
+}
+@mixin clients-1025 {
+  .talant {
+    padding: 80px 0;
+    &__title {
+      font-size: 20px;
+      &-ico {
+        font-size: 21px;
+      }
+    }
+    &__container-wrapper {
+      margin-left: -30px;
+      width: calc(100% + 60px);
+    }
+  }
+  .services {
+    &__row {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      width: calc(50% - 15px);
+      padding: 24px;
+      &._lg {
+        padding: 28px;
+        width: 100%;
+        flex: unset;
+        p {
+          max-width: 600px;
+        }
+      }
+    }
+    .video {
+      &__ratio {
+        padding-bottom: 60%;
+      }
+      &__play {
+        font-size: 23px;
+      }
+    }
+  }
+  .price {
+    padding: 80px 0;
+    &__inner {
+      gap: 60px;
+    }
+    &__row {
+      margin: unset;
+    }
+    &__card {
+      &-text {
+        strong {
+          font-size: 44px;
+          &._sm {
+            font-size: 36px;
+          }
+          &._extraSm {
+            font-size: 28px;
+          }
+        }
+      }
+      &._info {
+        padding: 50px 30px 60px;
+        .button {
+          width: 320px;
+        }
+      }
+    }
+  }
+}
+@mixin clients-940 {
+  .talant {
+    padding: 70px 0;
+    &__container-wrapper {
+      margin-left: -25px;
+      width: calc(100% + 50px);
+    }
+  }
+  .price {
+    &__card {
+      padding: 28px 20px;
+      border-radius: 18px;
+      &-text {
+        strong {
+          font-size: 40px;
+          &._sm {
+            font-size: 34px;
+          }
+          &._extraSm {
+            font-size: 26px;
+          }
+        }
+      }
+      &._info {
+        .price {
+          &__card {
+            &-content {
+              width: 100%;
+              max-width: unset;
+            }
+            &-row {
+              flex-direction: column;
+              align-items: flex-end;
+            }
+          }
+        }
+      }
+    }
+    &__planes {
+      &-item {
+        padding: 12px 18px;
+        font-size: 14px;
+        &._column {
+          flex-wrap: wrap;
+          gap: 18px;
+        }
+      }
+    }
+    &__button {
+      font-size: 14px;
+    }
+  }
+}
+@mixin clients-768 {
+  .talant {
+    padding: 64px 0;
+    &__inner {
+      gap: 60px;
+    }
+    &__container-wrapper {
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
+  }
+  .services {
+    &__inner {
+      gap: 60px;
+    }
+    &__row {
+      gap: 20px;
+    }
+    &__item {
+      width: calc(50% - 10px);
+      &._lg {
+        width: 100%;
+        flex: unset;
+        p {
+          max-width: 600px;
+        }
+      }
+    }
+  }
+  .price {
+    &__card {
+      padding: 20px 16px;
+      border-radius: 14px;
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+      &-box {
+        flex-direction: column;
+        align-items: flex-start;
+        .price__button {
+          order: -1;
+          margin-left: auto;
+        }
+      }
+      &-text {
+        strong {
+          font-size: 36px;
+          &._sm {
+            font-size: 30px;
+          }
+          &._extraSm {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    &__row {
+      flex-direction: column;
+    }
+    &__planes {
+      &-item {
+        width: 28%;
+        &:first-child {
+          width: 44%;
+        }
+      }
+    }
+  }
+}
+@mixin clients-660 {
+  .services {
+    padding: 64px 0;
+    &__inner {
+      gap: 50px;
+    }
+    &__row {
+      flex-direction: column;
+      gap: 32px;
+    }
+    &__item {
+      width: 100%;
+      gap: 12px;
+      &-group {
+        margin-bottom: 8px;
+      }
+      &._lg {
+        width: 100%;
+        flex: unset;
+        gap: 20px;
+        .services__item {
+          &-group {
+            margin-bottom: 4px;
+          }
+        }
+        p {
+          max-width: 600px;
+        }
+      }
+    }
+    .video {
+      &__ratio {
+        padding-bottom: 70%;
+      }
+      &__play {
+        font-size: 21px;
+      }
+    }
+  }
+  .price {
+    &__inner {
+      gap: 32px;
+    }
+    &__planes {
+      display: none;
+    }
+    &__header {
+      width: 100%;
+      padding: 24px 18px;
+      background: $white;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+        0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      margin-bottom: unset;
+      gap: 20px;
+      span {
+        display: none;
+      }
+    }
+    &__container {
+      background: unset;
+      box-shadow: unset;
+      border-radius: unset;
+      padding: unset;
+      overflow: unset;
+      gap: 48px;
+    }
+    &__row {
+      gap: 32px;
+    }
+    &__card {
+      background: $white;
+      border-radius: 20px;
+      padding: 32px 24px;
+      max-width: unset;
+      gap: 8px;
+      &._blue {
+        padding: 32px 24px;
+      }
+      &-container {
+        display: flex;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 32px;
+        ._hide {
+          &Desktop {
+            display: block;
+          }
+          &Mob {
+            display: none;
+          }
+        }
+      }
+      &-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+      &-text {
+        gap: 8px;
+        span {
+          display: none;
+        }
+        strong {
+          font-size: 40px;
+          small {
+            display: inline-block;
+            font-size: 24px;
+            font-family: $font-secondary;
+          }
+          &._sm {
+            font-size: 32px;
+            margin-bottom: unset;
+          }
+          &._extraSm {
+            font-size: 24px;
+          }
+        }
+      }
+      &-list {
+        margin-bottom: 24px;
+      }
+      &._info {
+        padding: 32px 24px;
+        .button {
+          background: $white;
+          width: 100%;
+        }
+        .price__card {
+          &-content {
+            display: none;
+          }
+        }
+      }
+      .button {
+        font-family: $font-secondary;
+      }
+    }
+  }
+}
+@mixin clients-460 {
+  .talant {
+    &__title {
+      font-size: 18px;
+      gap: 12px;
+      &-ico {
+        font-size: 19px;
+      }
+    }
+    &__container {
+      &-row {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@mixin clients-390 {
+  .services {
+    &__inner {
+      gap: 48px;
+    }
+    &__header {
+      gap: 12px;
+    }
+    &__item {
+      padding: 20px;
+      &._lg {
+        padding: 20px;
+      }
+      .button {
+        &.text--underline {
+          display: none;
+        }
+        &._hideDesktop {
+          display: flex;
+        }
+      }
+    }
+  }
+  .price {
+    &__header {
+      padding: 20px 10px;
+    }
+    &__card {
+      &-box {
+        gap: 16px;
+      }
+    }
+  }
+}
+@mixin clients-370 {
+  .services {
+    &__row {
+      gap: 24px;
+    }
+    &__item {
+      padding: 20px;
+      &-box {
+        flex-direction: column;
+        gap: 16px;
+        .button {
+          &--text {
+            width: 100%;
+          }
+        }
+      }
+      &._lg {
+        padding: 22px;
+      }
+    }
+  }
+  .price {
+    &__card {
+      &-text {
+        strong {
+          font-size: 36px;
+          small {
+            display: inline-block;
+            font-size: 20px;
+            font-family: $font-secondary;
+          }
+          &._sm {
+            font-size: 28px;
+            margin-bottom: unset;
+          }
+          &._extraSm {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

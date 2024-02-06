@@ -1,0 +1,244 @@
+/// section footer
+.footer {
+  margin-top: auto;
+  background: $primary;
+  color: $white;
+  padding: 80px 0;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $white;
+    padding-bottom: 20px;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 515px;
+    &-container {
+      display: flex;
+      gap: 32px;
+    }
+    &-social {
+      display: flex;
+      gap: 6px;
+    }
+    &-button {
+      font-size: 12px;
+      cursor: pointer;
+      @include transition;
+      position: relative;
+      padding: 5px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      &:hover {
+        background: rgba($white, 0.1);
+        border-color: $white;
+      }
+      span {
+        font-size: inherit;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2em;
+        height: 2em;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__link {
+    font-weight: 600;
+    color: $white;
+    @include transition;
+    span {
+      position: relative;
+      line-height: inherit;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        transform: scale(0);
+        @include transition;
+      }
+    }
+    &:hover {
+      opacity: 0.7;
+      span {
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &._sm {
+      font-weight: 400;
+      font-size: 14px;
+      span {
+        &::after {
+          transform: scale(1);
+          bottom: -2px;
+        }
+      }
+    }
+  }
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    &-box {
+      display: flex;
+      gap: 24px;
+    }
+    p {
+      font-size: 14px;
+      flex: 1;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    &-box {
+      display: flex;
+      gap: 16px;
+    }
+    .input {
+      width: auto;
+      flex: 1;
+      input {
+        background: transparent;
+        color: $white;
+        border-color: $white;
+        &::placeholder {
+          color: $white;
+        }
+        &:focus {
+          border-color: rgba($white, 0.5);
+        }
+      }
+    }
+    .button {
+      color: $black;
+      padding: 0.94em 1.45em;
+    }
+    p {
+      color: $white;
+      font-size: 12px;
+    }
+    a {
+      font-size: inherit;
+      @include transition;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@mixin footer-1025 {
+  .footer {
+    padding: 65px 0;
+    &__group {
+      &-container {
+        gap: 20px;
+      }
+    }
+  }
+}
+@mixin footer-940 {
+  .footer {
+    padding: 55px 0;
+    &__inner {
+      gap: 25px;
+    }
+    &__row {
+      flex-direction: column;
+      gap: 48px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-bottom: 48px;
+    }
+  }
+}
+@mixin footer-580 {
+  .footer {
+    &__group {
+      gap: 48px;
+      &-container {
+        flex-wrap: wrap;
+        gap: 20px;
+        .footer {
+          &__link {
+            width: calc(33.3% - 24px);
+          }
+        }
+      }
+    }
+    &__copy {
+      flex-direction: column;
+      gap: 32px;
+      p {
+        order: 1;
+      }
+    }
+  }
+}
+@mixin footer-460 {
+  .footer {
+    padding: 48px 0 64px;
+    &__group {
+      &-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        .footer {
+          &__link {
+            width: auto;
+          }
+        }
+      }
+    }
+    &__copy {
+      flex-direction: column;
+      gap: 32px;
+      p {
+        order: 1;
+      }
+      &-box {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+    &__form {
+      gap: 12px;
+      max-width: unset;
+      width: 100%;
+      &-box {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.howTo {
+  padding: 112px 0;
+  background: $white;
+  &__inner {
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    &-box {
+      display: flex;
+      gap: 8px;
+    }
+
+    .button {
+      &--text {
+        color: $black;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 8px;
+    .button {
+      &--ico {
+        width: 2em;
+        height: 2em;
+        background: $white-2;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        .ico {
+          width: 24px;
+          height: 24px;
+          color: $black;
+        }
+        &:hover {
+          border-color: $black;
+        }
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-text {
+      padding-left: 10px;
+      position: relative;
+      font-size: 14px;
+      &._lg {
+        padding-left: 22px;
+        font-size: 20px;
+        font-family: $font-inter;
+        font-style: italic;
+        margin: 36px 0 20px;
+      }
+      &::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $black;
+      }
+    }
+    h3 {
+      &._sm {
+        margin: 24px 0 4px 0;
+      }
+      &._lg {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+      h5 {
+        font-weight: 600;
+      }
+    }
+    &-group {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid $black;
+      width: 100%;
+    }
+    &-button {
+      font-size: 14px;
+      font-weight: 600;
+      font-family: $font-primary;
+      padding: 4.5px 8px;
+      background: $white-2;
+      @include transition;
+      cursor: pointer;
+      border: 1px solid transparent;
+      &:hover {
+        border-color: $black;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      margin: 0 auto;
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@mixin blog-1280 {
+}
+@mixin blog-1160 {
+  .howTo {
+    padding: 100px 0;
+  }
+}
+@mixin blog-1025 {
+}
+@mixin blog-940 {
+  .howTo {
+    padding: 80px 0;
+  }
+}
+@mixin blog-768 {
+}
+@mixin blog-580 {
+  .howTo {
+    padding: 64px 0;
+    &__inner {
+      gap: 48px;
+    }
+    &__header {
+      margin-bottom: 8px;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    &__container {
+      gap: 56px;
+      &-group {
+        gap: 8px;
+      }
+    }
+    &__footer {
+      gap: 32px;
+      &-group {
+        padding-bottom: 32px;
+      }
+      &-button {
+        padding: 4.5px 6px;
+      }
+    }
+  }
+}
+@mixin blog-460 {
+}
+@mixin blog-390 {
+}
+@mixin blog-370 {
+  .howTo {
+    &__footer {
+      &-group {
+        flex-wrap: wrap;
+      }
+      &-button {
+        width: calc(50% - 4px);
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.faq {
+  background: $primary-2;
+  padding: 112px 0;
+  color: $white;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    &-column {
+      width: calc(50% - 15px);
+      max-width: 624px;
+    }
+  }
+  &__tab {
+    border-bottom: 1px solid $white;
+    &:first-child {
+      border-top: 1px solid $white;
+    }
+    &-button {
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+      font-size: 18px;
+      padding: 22px 8px 22px 0;
+      @include transition;
+      cursor: pointer;
+      .text {
+        flex: 1;
+        line-height: 1.5;
+      }
+      .ico {
+        font-size: 8px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+      &.active {
+        .ico {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-content {
+      opacity: 0;
+      pointer-events: none;
+      max-height: 0;
+      padding: 0 16px;
+      transition: 0.3s linear;
+      overflow: hidden;
+      &.active {
+        opacity: 1;
+        max-height: unset;
+        pointer-events: all;
+        padding: 0 16px 30px;
+      }
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    p {
+      margin-bottom: 8px;
+    }
+    .button {
+      color: $black;
+      margin: 0 auto;
+      padding: 0.94em 1.6em;
+      &:hover {
+        color: $white;
+        background: rgba($white, 0.15);
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+@mixin faq-1160 {
+  .faq {
+    padding: 100px 0;
+    &__inner {
+      gap: 70px;
+    }
+  }
+}
+@mixin faq-1025 {
+  .faq {
+    padding: 80px 0;
+    &__tab {
+      &-button {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@mixin faq-768 {
+  .faq {
+    padding: 70px 0;
+    &__row {
+      flex-direction: column;
+      gap: 0;
+      &-column {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+    &__tab {
+      &-button {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@mixin faq-460 {
+  .faq {
+    padding: 64px 0;
+    &__inner {
+      gap: 48px;
+    }
+    &__tab {
+      &-button {
+        font-size: 16px;
+        padding: 16px 10px 16px 0;
+      }
+    }
+    &__group {
+      gap: 12px;
+      p {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,383 @@
+.intro {
+  padding: 60px 0 40px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1190px;
+  }
+  &__content {
+    width: calc(65% - 12px);
+    max-width: 746px;
+    p {
+      max-width: 586px;
+    }
+  }
+  &__image {
+    width: calc(35% - 12px);
+    max-width: 328px;
+    .ratioImage {
+      padding-bottom: 117%;
+    }
+  }
+  &--lg {
+    padding: 184px 0 174px;
+    background: $white;
+    .intro {
+      &__inner {
+        max-width: unset;
+        align-items: center;
+      }
+      &__content {
+        width: calc(47% - 12px);
+        max-width: 596px;
+        p {
+          margin-bottom: 16px;
+        }
+        &-group {
+          display: flex;
+          gap: 16px;
+          .button {
+            padding: 0.94em 1.5em;
+          }
+        }
+      }
+      &__image {
+        width: calc(53% - 12px);
+        max-width: 674px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+          0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+        .ratioImage {
+          border-radius: inherit;
+          overflow: hidden;
+          padding-bottom: 75%;
+        }
+      }
+    }
+  }
+  &--grid {
+    padding: 0;
+    .intro {
+      &__inner {
+        gap: 40px;
+        max-width: unset;
+        align-items: center;
+      }
+      &__content {
+        width: calc(48% - 20px);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 80px 0;
+        max-width: 576px;
+        p {
+          margin-bottom: 16px;
+        }
+        &-box {
+          display: flex;
+          gap: 16px;
+          .button {
+            padding: 0.94em 1.5em;
+          }
+        }
+      }
+      &__grid {
+        width: calc(52% - 20px);
+        max-width: 650px;
+        &-ratio {
+          padding-bottom: 138%;
+          position: relative;
+          overflow: hidden;
+        }
+        &-column {
+          width: calc(50% - 8px);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          &:nth-child(2) {
+            left: unset;
+            right: 0;
+            bottom: unset;
+            top: 0;
+          }
+        }
+        &-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  &--blog {
+    padding: 0;
+    .intro {
+      &__inner {
+        align-items: center;
+        max-width: 1150px;
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 50px 0;
+        strong {
+          display: none;
+        }
+      }
+      &__image {
+        max-width: 320px;
+      }
+    }
+    h2 {
+      ._hideDesktop {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin intro-1380 {
+  .intro {
+    &--grid {
+      h2 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+@mixin intro-1280 {
+  .intro {
+    &--lg {
+      .intro {
+        &__inner {
+          align-items: flex-start;
+        }
+      }
+    }
+    &--grid {
+      h2 {
+        font-size: 46px;
+      }
+    }
+  }
+}
+@mixin intro-1160 {
+  .intro {
+    &--lg {
+      padding: 150px 0;
+      .intro {
+        &__inner {
+          align-items: flex-start;
+        }
+      }
+    }
+    &--grid {
+      h2 {
+        font-size: 42px;
+      }
+    }
+  }
+}
+@mixin intro-1025 {
+  .intro {
+    &--lg {
+      padding: 120px 0;
+      .intro {
+        &__inner {
+          flex-direction: column;
+          gap: 48px;
+        }
+        &__image {
+          width: 100%;
+          max-width: 850px;
+          margin: 0 auto;
+        }
+        &__content {
+          width: 100%;
+          max-width: unset;
+          margin: 0 auto;
+          p {
+            max-width: unset;
+          }
+        }
+      }
+    }
+    &--grid {
+      .intro {
+        &__content {
+          padding: 50px 0;
+        }
+      }
+      h2 {
+        font-size: 38px;
+      }
+    }
+  }
+}
+@mixin intro-940 {
+  .intro {
+    padding: 64px 0 0;
+    &__inner {
+      flex-direction: column;
+      gap: 56px;
+    }
+    &__content {
+      width: 100%;
+      gap: 20px;
+    }
+    &__image {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    &--lg {
+      padding: 90px 0;
+    }
+    &--grid {
+      padding-top: 64px;
+      .intro {
+        &__inner {
+          gap: 64px;
+        }
+        &__content {
+          width: 100%;
+          padding: unset;
+          max-width: unset;
+        }
+        &__grid {
+          width: 100%;
+        }
+      }
+      h2 {
+        font-size: 40px;
+      }
+    }
+    &--blog {
+      padding: 64px 0 32px;
+      .intro {
+        &__inner {
+          align-items: flex-start;
+        }
+        &__content {
+          width: 100%;
+          padding: 0;
+        }
+        &__image {
+          width: 100%;
+          max-width: 450px;
+        }
+      }
+    }
+  }
+}
+@mixin intro-768 {
+  .intro {
+    &--lg {
+      padding: 70px 0;
+    }
+  }
+}
+@mixin intro-460 {
+  .intro {
+    &--lg {
+      padding: 64px 0;
+    }
+    &--grid {
+      .intro {
+        &__content {
+          gap: 20px;
+          p {
+            margin-bottom: 4px;
+          }
+        }
+      }
+      h2 {
+        font-size: 36px;
+      }
+    }
+    &--blog {
+      .intro {
+        &__inner {
+          gap: 48px;
+        }
+        &__content {
+          gap: 12px;
+          strong {
+            display: block;
+            font-weight: 600;
+          }
+          h2 {
+            margin-bottom: 8px;
+            ._hideMob {
+              display: none;
+            }
+            ._hideDesktop {
+              display: block;
+            }
+          }
+        }
+        &__image {
+          width: 85%;
+          max-width: 450px;
+        }
+      }
+    }
+  }
+}
+@mixin intro-390 {
+  .intro {
+    &--lg {
+      .intro {
+        &__content {
+          &-group {
+            .button {
+              padding: 0.94em 1.4em;
+            }
+          }
+        }
+        &__image {
+          .ratioImage {
+            padding-bottom: 105%;
+          }
+        }
+      }
+    }
+    &--grid {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+@mixin intro-370 {
+  .intro {
+    &--lg {
+      .intro {
+        &__content {
+          &-group {
+            flex-direction: column;
+            .button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    &--grid {
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,508 @@
+.achievement {
+  padding: 88px 0 65px;
+  background: $black;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px 30px;
+    width: calc(55% - 20px);
+    max-width: 690px;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: calc(33.3% - 20px);
+      white-space: nowrap;
+      max-width: 180px;
+      &._lg {
+        max-width: unset;
+      }
+      strong {
+        color: $primary-3;
+        font-family: $font-title;
+        font-size: 48px;
+        line-height: 1.2;
+        &.text--secondary {
+          color: $secondary-2;
+        }
+      }
+      span {
+        color: $white;
+        line-height: 1.2;
+      }
+      .text {
+        &--hideDesk {
+          display: none;
+        }
+        .advantages {
+        }
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+  .box {
+    gap: 16px;
+    width: calc(45% - 20px);
+    max-width: 542px;
+    h3 {
+      color: $white;
+    }
+    p {
+      color: $white;
+    }
+  }
+}
+.advantages {
+  padding: 40px 0 112px;
+  &__row {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: calc(33.3% - 20px);
+    max-width: 405px;
+    &-image {
+      font-size: 24px;
+      width: 2em;
+      height: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.team {
+  padding: 112px 0;
+  background: linear-gradient(180deg, #3b1cfa 3.5%, #191c51 100%);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $white;
+    strong {
+      font-weight: 600;
+    }
+    .text {
+      &--hideDesk {
+        display: none;
+      }
+    }
+    h2 {
+      color: $white;
+    }
+    p {
+      color: $white;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    &-row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      @include transition;
+    }
+    .button {
+      &--primary {
+        margin-right: auto;
+        padding: 0.94em 1.45em;
+        color: $black;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    z-index: 0;
+    width: calc(25% - 24px);
+    @include transition;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $white;
+    border-radius: 20px;
+    border: 1px solid transparent;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      border-radius: inherit;
+      background: transparent;
+      transition: 0.3s ease-out;
+    }
+    &:hover {
+      color: $black;
+
+      &:after {
+        will-change: auto;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background: $white;
+
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+          0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+      }
+    }
+    &-image {
+      border-radius: 20px;
+      overflow: hidden;
+      background: $white;
+      .ratioImage {
+        padding-bottom: 98%;
+      }
+    }
+    &-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: calc(100% - 10px);
+    }
+    .button {
+      color: inherit;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      color: inherit;
+      flex: 1;
+      gap: 4px;
+      strong {
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+      span {
+        line-height: 1.5;
+        font-size: 18px;
+      }
+    }
+    &._hide {
+      display: none;
+    }
+  }
+}
+
+@mixin about-1380 {
+  .achievement {
+    &__container {
+      &-item {
+        strong {
+          font-size: 44px;
+        }
+      }
+    }
+  }
+  .team {
+    &__container {
+      &-row {
+        gap: 32px 24px;
+      }
+    }
+    &__item {
+      width: calc(25% - 18px);
+    }
+  }
+}
+@mixin about-1280 {
+  .achievement {
+    &__container {
+      &-item {
+        max-width: 150px;
+        &._lg {
+          max-width: unset;
+        }
+        strong {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  .team {
+    &__container {
+      &-row {
+        gap: 32px 16px;
+      }
+    }
+    &__item {
+      width: calc(25% - 12px);
+    }
+  }
+}
+@mixin about-1160 {
+  .achievement {
+    &__row {
+      flex-direction: column;
+      align-items: unset;
+      justify-content: unset;
+    }
+    &__container {
+      width: 100%;
+      max-width: unset;
+      &-item {
+        max-width: unset;
+        &:nth-child(3) {
+          max-width: 180px;
+        }
+        &:nth-child(6) {
+          max-width: 180px;
+        }
+      }
+    }
+    .box {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+  .advantages {
+    &__item {
+      gap: 18px;
+    }
+  }
+  .team {
+    padding: 90px 0;
+    &__container {
+      gap: 80px;
+      &-row {
+        gap: 32px 24px;
+      }
+    }
+    &__item {
+      width: calc(33.3% - 16px);
+    }
+  }
+}
+@mixin about-940 {
+  .achievement {
+    &__container {
+      &-item {
+        max-width: 180px;
+      }
+    }
+    .box {
+      gap: 20px;
+    }
+  }
+  .advantages {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: calc(50% - 15px);
+      max-width: unset;
+    }
+  }
+  .team {
+    padding: 80px 0;
+    &__inner {
+      gap: 70px;
+    }
+    &__container {
+      gap: 70px;
+      &-row {
+        gap: 32px 20px;
+      }
+    }
+    &__item {
+      width: calc(50% - 10px);
+    }
+  }
+}
+@mixin about-768 {
+  .achievement {
+    padding: 64px 0;
+    &__inner {
+      gap: 70px;
+    }
+    &__container {
+      gap: 30px 30px;
+      &-item {
+        strong {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+  .team {
+    padding: 70px 0;
+    &__container {
+      gap: 60px;
+    }
+    &__inner {
+      gap: 60px;
+    }
+  }
+}
+@mixin about-660 {
+  .achievement {
+    &__inner {
+      gap: 60px;
+    }
+    &__container {
+      gap: 30px 30px;
+      &-item {
+        width: calc(50% - 15px);
+        max-width: unset;
+        &:nth-child(3) {
+          max-width: unset;
+        }
+        &:nth-child(6) {
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+@mixin about-580 {
+  .advantages {
+    padding: 24px 0 64px;
+    &__row {
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+    &__item {
+      width: 100%;
+      gap: 12px;
+    }
+  }
+  .team {
+    padding: 64px 0;
+    &__inner {
+      gap: 48px;
+    }
+    &__container {
+      gap: 56px;
+      &-row {
+        gap: 48px;
+      }
+    }
+    &__item {
+      width: 100%;
+      gap: 20px;
+    
+      &-image {
+        .ratioImage {
+          padding-bottom: 67%;
+          img {
+            object-position: top;
+          }
+        }
+      }
+    }
+    &__box {
+      gap: 12px;
+      h2 {
+        margin-bottom: 20px;
+      }
+      .text {
+        &--hideDesk {
+          display: block;
+        }
+        &--hideMob {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@mixin about-460 {
+  .achievement {
+    &__inner {
+      gap: 56px;
+    }
+    &__row {
+      gap: 32px;
+    }
+    &__container {
+      gap: 30px 30px;
+      &-item {
+        strong {
+          font-size: 34pxx;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@mixin about-390 {
+  .achievement {
+    &__container {
+      gap: 24px;
+      &-item {
+        width: 100%;
+        strong {
+          font-size: 36px;
+          order: -1;
+        }
+        span {
+          font-size: 16px;
+        }
+        .text {
+          &--hideMob {
+            display: none;
+          }
+          &--hideDesk {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin about-370 {
+  .achievement {
+    &__image {
+      border-radius: 10px;
+    }
+  }
+}

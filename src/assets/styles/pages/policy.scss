@@ -1,0 +1,88 @@
+.policy {
+  padding: 112px 0;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  &__text {
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 12px;
+    font-family: $font-inter;
+    font-style: italic;
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $black;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      &._sm {
+        gap: 16px;
+      }
+      &._mid {
+        gap: 20px;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
+
+@mixin policy-1160 {
+  .policy {
+    padding: 100px 0;
+  }
+}
+@mixin policy-1025 {
+  .policy {
+    padding: 80px 0;
+  }
+}
+@mixin policy-940 {
+  .policy {
+    padding: 70px 0;
+  }
+}
+@mixin policy-580 {
+  .policy {
+    padding: 64px 0;
+    &__inner {
+      gap: 100px;
+    }
+  }
+}
+@mixin policy-390 {
+  .policy {
+    h4 {
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+  }
+}
+

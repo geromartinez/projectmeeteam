@@ -1,0 +1,240 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(217, 217, 217, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: auto;
+  backdrop-filter: blur(2px);
+
+  &__inner {
+    padding: 86px 40px 66px;
+    width: 100%;
+    max-width: 1432px;
+    margin: auto;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+  }
+  &-close {
+    color: $black;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 28px;
+  }
+  &__row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    &._lg {
+      align-items: flex-start;
+    }
+  }
+  &__card {
+    width: calc(33.3% - 15px);
+    padding: 32px 24px;
+    border: 4px solid $black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-family: $font-secondary;
+    color: $black-4;
+    &-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 18px;
+      font-family: $font-primary;
+      .price__button {
+        margin-left: auto;
+        margin-bottom: 8px;
+      }
+    }
+    &-text {
+      font-size: 23px;
+    }
+    .text {
+      &--title {
+        font-size: 30px;
+        font-family: $font-title;
+        line-height: 1.2;
+      }
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        display: flex;
+        gap: 16px;
+        .ico {
+          color: $green;
+        }
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+@mixin popup-1380 {
+  .popup {
+    &__inner {
+      padding: 86px 20px 66px;
+    }
+    &__row {
+      gap: 20px;
+    }
+    &__card {
+      width: calc(33.3% - 10px);
+      &-text {
+        font-size: 22px;
+      }
+      .text {
+        &--title {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-1280 {
+  .popup {
+    &__inner {
+      padding: 86px 20px 40px;
+    }
+    &-close {
+      right: 20px;
+    }
+    &__row {
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: unset;
+    }
+    &__card {
+      width: calc(50% - 15px);
+      &._lg {
+        order: -1;
+      }
+    }
+  }
+}
+@mixin popup-1160 {
+}
+@mixin popup-1025 {
+  .popup {
+    &__inner {
+      padding: 76px 20px 40px;
+      gap: 70px;
+    }
+    &-close {
+      top: 15px;
+      right: 15px;
+    }
+    &__row {
+      flex-wrap: wrap;
+      gap: 30px 20px;
+      align-items: unset;
+    }
+    &__card {
+      width: calc(50% - 10px);
+    }
+  }
+}
+@mixin popup-940 {
+  .popup {
+    &__inner {
+      padding: 66px 20px 30px;
+      gap: 60px;
+    }
+    &__card {
+      padding: 28px 20px;
+      width: calc(50% - 10px);
+      border-width: 3px;
+      &-text {
+        font-size: 20px;
+      }
+      .text {
+        &--title {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-840 {
+  .popup {
+    &__inner {
+      gap: 50px;
+    }
+    &__card {
+      width: 100%;
+    }
+  }
+}
+@mixin popup-768 {
+}
+@mixin popup-580 {
+  .popup {
+    &__card {
+      width: 100%;
+    }
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+@mixin popup-460 {
+  .popup {
+    padding: 14px;
+    &__inner {
+      padding: 56px 14px 20px;
+      gap: 40px;
+    }
+    &-close {
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+    }
+    &__card {
+      width: 100%;
+      padding: 22px 14px;
+      &-text {
+        font-size: 18px;
+      }
+      &-header {
+        font-size: 16px;
+      }
+      .text {
+        &--title {
+          font-size: 22px;
+        }
+      }
+    }
+    h2 {
+      font-size: 32px;
+    }
+  }
+}
+@mixin popup-390 {
+}
+@mixin popup-370 {
+}

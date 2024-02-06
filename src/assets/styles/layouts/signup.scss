@@ -1,0 +1,212 @@
+.signup {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  background: $white;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    padding: 18px 0 24px;
+  }
+  &__image {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 18px;
+    width: calc(50% - 30px);
+    max-width: 592px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 480px;
+    margin: 0 auto;
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+    }
+  }
+  &__form {
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &-group {
+      display: flex;
+      gap: 24px;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  &__copy {
+    font-size: 14px;
+    color: $primary;
+  }
+  ._order {
+    order: -1;
+  }
+
+  .input__wrapper {
+    flex: 1;
+    .input {
+      &--select {
+        .input__selected {
+          padding: 0.94em 0.85em;
+          min-height: 48px;
+        }
+      }
+    }
+    &-box {
+      .text {
+        &--underline {
+          &:after {
+            bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+  .autoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+@mixin signup-1025 {
+  .signup {
+    &__form {
+      gap: 18px;
+      &-group {
+        gap: 18px;
+      }
+    }
+  }
+}
+@mixin signup-940 {
+  .signup {
+    min-height: unset;
+    &__inner {
+      padding-bottom: 0;
+      gap: 64px;
+    }
+    &__container {
+      width: 100%;
+      max-width: unset;
+      gap: 30px;
+    }
+    &__content {
+      width: 100%;
+      max-width: 750px;
+      gap: 28px;
+      &-box {
+        gap: 20px;
+        p {
+          color: $black;
+          &._color {
+            color: $primary;
+          }
+        }
+      }
+    }
+    &__form {
+      gap: 24px;
+      margin-bottom: unset;
+      &-box {
+        flex-direction: row;
+        gap: 18px;
+        .button {
+          flex: 1;
+        }
+      }
+    }
+    &__image {
+      position: unset;
+      width: 100%;
+      max-width: unset;
+      margin-left: -25px;
+      width: calc(100% + 50px);
+      img {
+        max-height: 700px;
+      }
+    }
+    &__copy {
+      position: absolute;
+      left: 50%;
+      bottom: 22px;
+      color: $white;
+      transform: translateX(-50%);
+    }
+    .autoContainer {
+      flex: unset;
+    }
+  }
+}
+@mixin signup-660 {
+  .signup {
+    &__form {
+      &-box {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+    &__image {
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
+  }
+}
+@mixin signup-580 {
+  .signup {
+    &__content {
+      gap: 24px;
+    }
+    &__form {
+      &-group {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  }
+}
+@mixin signup-390 {
+  .signup {
+    &__image {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
+}

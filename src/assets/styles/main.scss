@@ -1,0 +1,34 @@
+// presets
+@import "./base/mixin.scss";
+@import "./base/variables.scss";
+@import "./base/typography.scss";
+@import "./base/nulifier.scss";
+// layouts
+@import "./layouts/components.scss";
+@import "./layouts/layouts.scss";
+@import "./layouts/footer.scss";
+@import "./layouts/header.scss";
+@import "./layouts/nav.scss";
+@import "./layouts/hero.scss";
+@import "./layouts/info.scss";
+@import "./layouts/partners.scss";
+@import "./layouts/signup.scss";
+@import "./layouts/intro.scss";
+@import "./layouts/hero.scss";
+@import "./layouts/info.scss";
+@import "./layouts/faq.scss";
+@import "./layouts/announcement.scss";
+@import "./layouts/article.scss";
+@import "./layouts/popup.scss";
+
+// pages
+@import "./pages/index.scss";
+@import "./pages/candidates.scss";
+@import "./pages/about.scss";
+@import "./pages/clients.scss";
+@import "./pages/policy.scss";
+@import "./pages/contacts.scss";
+@import "./pages/blog.scss";
+
+// responsive
+@import "./layouts/responsive.scss";

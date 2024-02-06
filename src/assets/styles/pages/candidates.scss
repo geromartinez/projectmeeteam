@@ -1,0 +1,518 @@
+.instructions {
+  padding: 112px 0 82px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+  &__header {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    color: $black-4;
+    font-family: $font-title;
+    font-size: 24px;
+    justify-content: center;
+    text-align: center;
+    &-ico {
+      font-size: 25px;
+      width: 2em;
+      height: 2em;
+      min-width: 2em;
+      min-height: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #3b1cfa 3.5%, #191c51 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    color: $white;
+  }
+  &__content {
+    width: calc(50% - 15px);
+    max-width: 616px;
+    padding: 30px 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    &-box {
+      display: flex;
+      gap: 24px;
+      .button {
+        &--primary {
+          padding: 0.94em 1.5em;
+          color: $black;
+        }
+        &--text {
+          color: $white;
+        }
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 24px;
+  }
+  &__item {
+    width: calc(50% - 12px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      width: 2em;
+      height: 2em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .video {
+    width: calc(50% - 15px);
+    max-width: 616px;
+    border-radius: unset;
+    &__ratio {
+      padding-bottom: 108%;
+      height: 100%;
+    }
+  }
+}
+.jobs {
+  padding: 112px 0;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .swiper {
+      width: 100% !important;
+      overflow: visible !important;
+      &-wrapper {
+        transition-timing-function: linear !important;
+      }
+      &-slide {
+        width: auto !important;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    &-title {
+      width: calc(50% - 20px);
+      max-width: 616px;
+      span {
+        display: none;
+      }
+    }
+    &-group {
+      width: calc(50% - 20px);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 616px;
+    }
+    &-box {
+      display: flex;
+      gap: 16px;
+      .button {
+        &--text {
+          color: $black;
+        }
+        &--primary {
+          background: $primary-2;
+          border-color: $primary-2;
+          &:hover {
+            background: rgba($primary-2, 0.15);
+            color: $primary;
+          }
+        }
+      }
+    }
+    .button {
+      &--primary {
+        padding: 0.94em 1.5em;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &-row {
+      display: flex;
+      gap: 16px;
+      width: 100% !important;
+    }
+  }
+  &__item {
+    position: relative;
+    font-size: 30px;
+    width: 10.7em;
+    height: 8.26em;
+    background: $white-6;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    overflow: hidden;
+    strong {
+      font-size: 24px;
+      line-height: 1.4;
+      font-family: $font-title;
+      text-align: center;
+    }
+    &-ico {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: inherit;
+      width: 2.13em;
+      height: 2.13em;
+      position: absolute;
+      right: 0.8em;
+      top: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s ease;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &:hover {
+      .jobs__item {
+        &-image {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+}
+
+@mixin candidates-1380 {
+  .instructions {
+    &__row {
+      gap: 28px 18px;
+    }
+    &__content {
+      padding: 25px 20px 25px 0;
+    }
+    &__item {
+      width: calc(50% - 9px);
+      h4 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+@mixin candidates-1280 {
+  .instructions {
+    &__inner {
+      gap: 80px;
+    }
+    &__row {
+      gap: 28px 14px;
+    }
+    &__content {
+      padding: 22px 16px 22px 0;
+    }
+    &__item {
+      width: calc(50% - 7px);
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@mixin candidates-1160 {
+  .instructions {
+    padding: 90px 0 80px;
+    &__inner {
+      gap: 60px;
+    }
+    &__row {
+      gap: 28px 14px;
+    }
+    &__content {
+      padding: 22px 16px 22px 0;
+    }
+    &__item {
+      width: calc(50% - 7px);
+      &-image {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .jobs {
+    &__item {
+      font-size: 28px;
+    }
+  }
+}
+@mixin candidates-1025 {
+  .instructions {
+    padding: 70px 0;
+    &__header {
+      font-size: 22px;
+      &-ico {
+        font-size: 23px;
+      }
+    }
+    &__row {
+      gap: 28px 24px;
+    }
+    &__container {
+      flex-direction: column;
+      background: unset;
+      gap: unset;
+    }
+    &__content {
+      padding: 20px 20px 40px;
+      width: 100%;
+      max-width: unset;
+      background: linear-gradient(180deg, #3b1cfa 3.5%, #191c51 100%);
+    }
+    &__item {
+      width: calc(50% - 12px);
+      &-image {
+        font-size: 24px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .video {
+      order: 1;
+      width: 100%;
+      max-width: unset;
+      &__ratio {
+        padding-bottom: 60%;
+      }
+    }
+  }
+  .jobs {
+    padding: 100px 0;
+    &__inner {
+      gap: 70px;
+    }
+    &__item {
+      font-size: 26px;
+      strong {
+        font-size: 22px;
+      }
+    }
+  }
+}
+@mixin candidates-940 {
+  .jobs {
+    padding: 80px 0;
+    &__inner {
+      gap: 60px;
+    }
+    &__container {
+      flex-direction: column;
+      gap: 32px;
+      &-title {
+        width: 100%;
+        max-width: unset;
+      }
+      &-group {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+    &__item {
+      font-size: 24px;
+      strong {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@mixin candidates-768 {
+  .instructions {
+    padding: 64px 0 32px;
+    .video {
+      &__ratio {
+        padding-bottom: 75%;
+      }
+    }
+  }
+  .jobs {
+    padding: 32px 0 64px;
+    &__inner {
+      gap: 50px;
+    }
+    &__item {
+      font-size: 22px;
+    }
+  }
+}
+@mixin candidates-580 {
+  .instructions {
+    &__header {
+      font-size: 20px;
+      gap: 10px;
+      &-ico {
+        font-size: 21px;
+      }
+    }
+    &__row {
+      gap: 32px;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+  .jobs {
+    &__container {
+      &-group {
+        gap: 24px;
+      }
+      &-title {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        span {
+          display: block;
+          font-weight: 600;
+        }
+      }
+    }
+    &__item {
+      font-size: 20px;
+      strong {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@mixin candidates-460 {
+  .instructions {
+    &__inner {
+      gap: 40px;
+    }
+    &__header {
+      font-size: 18px;
+      gap: 10px;
+      &-ico {
+        font-size: 18px;
+      }
+    }
+    &__row {
+      gap: 32px;
+    }
+    &__item {
+      width: 100%;
+      gap: 12px;
+    }
+    &__content {
+      padding-bottom: 22px;
+    }
+    .video {
+      &__ratio {
+        padding-bottom: 100%;
+      }
+    }
+  }
+  .jobs {
+    &__item {
+      font-size: 18px;
+      padding: 10px;
+      strong {
+        font-size: 16px;
+        word-break: break-all;
+      }
+    }
+  }
+}
+@mixin candidates-390 {
+  .instructions {
+    .video {
+      &__ratio {
+        padding-bottom: 103%;
+      }
+      &__play {
+        width: 6.4em;
+        height: 4.8em;
+      }
+    }
+  }
+  .jobs {
+    &__item {
+      font-size: 15px;
+      padding: 10px;
+      width: 10.52em;
+      height: 8.11em;
+      &-ico {
+        width: 2em;
+        height: 2em;
+        right: 12px;
+      }
+      strong {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@mixin candidates-370 {
+  .instructions {
+    &__content {
+      &-box {
+        flex-direction: column;
+      }
+    }
+  }
+}

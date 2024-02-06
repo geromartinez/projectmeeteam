@@ -1,0 +1,175 @@
+/* Typography */
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 56px;
+  &._sm {
+    font-size: 48px;
+  }
+}
+h3 {
+  font-size: 36px;
+  &._lg {
+    font-size: 40px;
+  }
+  &._sm {
+    font-size: 32px;
+  }
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+  &._sm {
+    font-size: 18px;
+  }
+}
+h6 {
+  font-size: 16px;
+  &._sm {
+    font-size: 14px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+p {
+  &._sm {
+    font-size: 14px;
+  }
+  &._lg {
+    font-size: 18px;
+  }
+  &._extraLg {
+    font-size: 20px;
+  }
+  line-height: 1.5em;
+}
+
+@mixin typography-1160 {
+  h1 {
+    font-size: 54px;
+  }
+  h2 {
+    font-size: 52px;
+    &._sm {
+      font-size: 46px;
+    }
+  }
+  h3 {
+    &._lg {
+      font-size: 38px;
+    }
+  }
+}
+@mixin typography-940 {
+  h2 {
+    font-size: 48px;
+    &._sm {
+      font-size: 44px;
+    }
+  }
+  h3 {
+    &._sm {
+      font-size: 30px;
+    }
+    &._lg {
+      font-size: 36px;
+    }
+  }
+  p {
+    &._extraLg {
+      font-size: 18px;
+    }
+  }
+}
+@mixin typography-768 {
+  h2 {
+    font-size: 46px;
+    &._sm {
+      font-size: 42px;
+    }
+  }
+  h3 {
+    &._sm {
+      font-size: 28px;
+    }
+    &._lg {
+      font-size: 34px;
+    }
+  }
+}
+@mixin typography-580 {
+  h2 {
+    font-size: 44px;
+    &._sm {
+      font-size: 40px;
+    }
+  }
+  h3 {
+    &._sm {
+      font-size: 26px;
+    }
+  }
+}
+@mixin typography-460 {
+  h2 {
+    font-size: 42px;
+    &._sm {
+      font-size: 38px;
+    }
+  }
+  h3 {
+    &._sm {
+      font-size: 24px;
+    }
+    &._lg {
+      font-size: 32px;
+    }
+  }
+  p {
+    &._extraLg {
+      font-size: 16px;
+    }
+    &._lg {
+      font-size: 16px;
+    }
+  }
+}
+@mixin typography-390 {
+  h2 {
+    font-size: 40px;
+    &._sm {
+      font-size: 36px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+@mixin typography-370 {
+  h2 {
+    font-size: 36px;
+    &._sm {
+      font-size: 32px;
+    }
+  }
+  h3 {
+    &._sm {
+      font-size: 22px;
+    }
+    &._lg {
+      font-size: 28px;
+    }
+  }
+}

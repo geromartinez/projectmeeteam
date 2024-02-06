@@ -1,0 +1,12 @@
+.principal {
+    width: 100%;
+    background-size: cover;
+}
+
+.principal .bckg-principal {
+    background: blue;
+}
+
+.principal .img-principal {
+    width: 20%;
+}
